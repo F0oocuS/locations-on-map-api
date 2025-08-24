@@ -1,4 +1,4 @@
-# Location on map API
+# Location on map (API)
 
 Про проект:
 - використовується node.js + express.
