@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const locationRouter = require('./src/routes/location.route');
+const entityRouter = require('./src/routes/entity.route');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/locations', locationRouter);
+app.use('/api/entities', entityRouter);
 
 app.listen(3000);
 

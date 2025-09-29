@@ -10,6 +10,18 @@ exports.getAllLocations = (req, res, next) => {
 	}
 };
 
+exports.getLocationById = (req, res, next) => {
+	try {
+		const location = locationModel.getLocationById(req.params.id);
+		if (!location) {
+			return res.status(404).json({ error: 'Location not found' });
+		}
+		res.status(200).json(location);
+	} catch (error) {
+		res.status(500).json({ error: error.message });
+	}
+};
+
 exports.addLocation = (req, res, next) => {
 	try {
 		const newLocation = locationModel.addLocation(req.body);
