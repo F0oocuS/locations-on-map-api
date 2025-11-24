@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
 			defaultValue: []
 		}
 	}, {
-		tableName: 'admin_unit_name'
+		tableName: 'admin_unit_name',
+		timestamps: false
 	});
 
 	AdminUnitName.associate = function (models) {

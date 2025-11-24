@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	}, {
 		tableName: 'admin_unit_edge',
+		timestamps: false,
 		indexes: [
 			{
 				fields: ['child_id'],

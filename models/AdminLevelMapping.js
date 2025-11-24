@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: true
 		}
 	}, {
-		tableName: 'admin_level_mapping'
+		tableName: 'admin_level_mapping',
+		timestamps: false
 	});
 
 	return AdminLevelMapping;

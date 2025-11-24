@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	}, {
 		tableName: 'admin_unit_geom',
+		timestamps: false,
 		indexes: [
 			{
 				fields: ['geom'],

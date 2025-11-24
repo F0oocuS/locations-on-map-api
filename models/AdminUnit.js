@@ -45,6 +45,7 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	}, {
 		tableName: 'admin_unit',
+		timestamps: false,
 		indexes: [
 			{
 				unique: true,
