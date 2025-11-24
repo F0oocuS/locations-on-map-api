@@ -30,15 +30,7 @@ module.exports = (sequelize, DataTypes) => {
 			defaultValue: []
 		}
 	}, {
-		tableName: 'admin_unit_name',
-		indexes: [
-			{
-				fields: ['name'],
-				using: 'gin',
-				operator: 'gin_trgm_ops',
-				name: 'admin_unit_name_trgm'
-			}
-		]
+		tableName: 'admin_unit_name'
 	});
 
 	AdminUnitName.associate = function (models) {

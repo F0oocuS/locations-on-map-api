@@ -13,11 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 			primaryKey: true
 		},
 		unit_kind: {
-			type: DataTypes.ENUM(
-				'country', 'federal_district', 'region',
-				'district', 'municipality', 'hromada',
-				'settlement', 'city_district', 'microdistrict'
-			),
+			type: 'unit_kind',
 			allowNull: false
 		},
 		label_uk: {

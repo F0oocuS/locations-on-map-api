@@ -5,18 +5,14 @@ module.exports = (sequelize, DataTypes) => {
 		id: {
 			type: DataTypes.UUID,
 			primaryKey: true,
-			defaultValue: DataTypes.UUIDV4
+			defaultValue: sequelize.literal('gen_random_uuid()')
 		},
 		country_code: {
 			type: DataTypes.CHAR(2),
 			allowNull: false
 		},
 		unit_kind: {
-			type: DataTypes.ENUM(
-				'country', 'federal_district', 'region',
-				'district', 'municipality', 'hromada',
-				'settlement', 'city_district', 'microdistrict'
-			),
+			type: 'unit_kind',
 			allowNull: false
 		},
 		admin_level: {
@@ -36,11 +32,11 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: true
 		},
 		valid_from: {
-			type: DataTypes.DATE,
+			type: 'TIMESTAMPTZ',
 			allowNull: true
 		},
 		valid_to: {
-			type: DataTypes.DATE,
+			type: 'TIMESTAMPTZ',
 			allowNull: true
 		},
 		meta: {

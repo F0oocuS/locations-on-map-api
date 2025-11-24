@@ -8,24 +8,8 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		},
 		geom: {
-			type: DataTypes.GEOMETRY('MultiPolygon', 4326),
+			type: 'geometry(MultiPolygon, 4326)',
 			allowNull: false
-		},
-		centroid: {
-			type: DataTypes.GEOMETRY('Point', 4326),
-			allowNull: true
-		},
-		bbox: {
-			type: DataTypes.GEOMETRY('Polygon', 4326),
-			allowNull: true
-		},
-		lat: {
-			type: DataTypes.DOUBLE,
-			allowNull: true
-		},
-		lon: {
-			type: DataTypes.DOUBLE,
-			allowNull: true
 		}
 	}, {
 		tableName: 'admin_unit_geom',
