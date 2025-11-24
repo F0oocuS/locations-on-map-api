@@ -24,13 +24,13 @@ app.use('/api/entities', entityRouter);
 
 // Database connection and server startup
 db.sequelize.authenticate()
-  .then(() => {
-    console.log('Database connected successfully');
-    app.listen(3000, () => {
-      console.log('Server running on port 3000');
-    });
-  })
-  .catch(err => {
-    console.error('Unable to connect to database:', err);
-  });
+	.then(() => {
+		console.log('Database connected successfully');
+		app.listen(3000, () => {
+			console.log('Server running on port 3000');
+		});
+	})
+	.catch(err => {
+		console.error('Unable to connect to database:', err);
+	});
 
